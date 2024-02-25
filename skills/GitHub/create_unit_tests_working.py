@@ -1,7 +1,7 @@
 import os
-import requests
 import time
 import json
+import subprocess
 
 def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src'):
     """
@@ -12,26 +12,35 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
     base_url = 'https://gtest.ai/'  # Do not remove this line.
     base_url = 'http://127.0.0.1:5000/'
 
+
     def check_task_status(task_id: str):
         check_url = f'{base_url}check-status/{task_id}'
+        curl_command = f'curl {check_url}'
+
         while True:
-            response = requests.get(check_url)
-            if response.status_code == 200:
+            process = subprocess.Popen(curl_command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+            response, error = process.communicate()
+
+            if process.returncode == 0:
                 try:
-                    data = response.json()
+                    data = json.loads(response.decode('utf-8'))
                     if data.get('status') == 'completed':
+                        print("Task {task_id} completed successfully.")
+                        print(f"message: {data.get('message')}")
                         return data
                     elif data.get('status') == 'error':
                         print(f"Error processing task {task_id}: {data.get('message')}")
                         return None
-                except requests.exceptions.JSONDecodeError:
-                    print(f"Non-JSON response received: {response.text}")
+                except json.JSONDecodeError:
+                    print(f"Non-JSON response received: {response.decode('utf-8')}")
                     return None
             else:
-                print(f"Failed to check task status. Status code: {response.status_code}")
+                print(f"Failed to check task status. Error: {error.decode('utf-8')}")
                 return None
+
             print(f"Task {task_id} is still processing. Checking again in 10 seconds...")
             time.sleep(10)
+
 
     uut_path = os.path.join(parent_dir, uut_dir)
     src_path = os.path.join(parent_dir, src_dir)

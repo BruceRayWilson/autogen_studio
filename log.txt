@@ -5197,3 +5197,432 @@ TERMINATE
 --------------------------------------------------------------------------------
 Modified files:  1
 INFO:     127.0.0.1:58332 - "POST /api/messages HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58636 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58650 - "GET /api/version HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58654 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58654 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=f81d8525-ccff-415c-984c-6d283ad73fd8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58654 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=f81d8525-ccff-415c-984c-6d283ad73fd8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40698 - "GET /api/workflows?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52498 - "GET /api/skills?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52308 - "POST /api/skills HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52308 - "GET /api/agents?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52312 - "GET /api/agents?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52312 - "GET /api/models?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40654 - "GET /api/skills?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59268 - "POST /api/workflows HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59268 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59274 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=f81d8525-ccff-415c-984c-6d283ad73fd8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59268 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=f81d8525-ccff-415c-984c-6d283ad73fd8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41428 - "GET /api/workflows?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41428 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41428 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=7619aa95-c14d-4654-a9dd-0c65c2a1456c HTTP/1.1" 200 OK
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+To use the `create_unit_tests` skill, I will execute the Python code that will create unit tests for C++ files found in the specified Unit Under Test (UUT) directory and store the generated test files in the specified source directory. Since you have the local web server running, the skill will interact with it to process the files.
+
+Let's proceed with executing the code.
+
+```python
+# filename: create_unit_tests_execution.py
+from skills import create_unit_tests
+
+# The parent directory where the UUT directory is located
+parent_dir = '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting'
+
+# Execute the create_unit_tests skill
+create_unit_tests(parent_dir)
+```
+
+Please save the above code to a file named `create_unit_tests_execution.py` in the `/home/wilsonb/dl/github.com/BruceRayWilson/Accounting` directory and run it using Python. This will start the process of creating unit tests for the C++ files in the specified directory.
+
+--------------------------------------------------------------------------------
+
+>>>>>>>> EXECUTING CODE BLOCK 0 (inferred language is python)...
+userproxy (to primary_assistant):
+
+exitcode: 1 (execution failed)
+Code output: 
+Traceback (most recent call last):
+  File "create_unit_tests_execution.py", line 2, in <module>
+    from skills import create_unit_tests
+  File "skills.py", line 7, in <module>
+    from autogen.core import skill
+ModuleNotFoundError: No module named 'autogen.core'
+
+
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/web/app.py", line 70, in add_message
+    response_message: Message = chatmanager.chat(
+                                ^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/chatmanager.py", line 29, in chat
+    flow.run(message=f"{message_text}", clear_history=False)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/workflowmanager.py", line 219, in run
+    self.sender.initiate_chat(
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 816, in initiate_chat
+    self.send(self.generate_init_message(**context), recipient, silent=silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 516, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 693, in receive
+    self.send(reply, sender, silent=silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 516, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 693, in receive
+    self.send(reply, sender, silent=silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 516, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 691, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1646, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1064, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1083, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 624, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 278, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 980, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-3PQG7***************************************2xF6. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+
+INFO:     127.0.0.1:49992 - "POST /api/messages HTTP/1.1" 200 OK
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/web/app.py", line 70, in add_message
+    response_message: Message = chatmanager.chat(
+                                ^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/chatmanager.py", line 29, in chat
+    flow.run(message=f"{message_text}", clear_history=False)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/workflowmanager.py", line 219, in run
+    self.sender.initiate_chat(
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 816, in initiate_chat
+    self.send(self.generate_init_message(**context), recipient, silent=silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 516, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 691, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1646, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1064, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1083, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 624, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 278, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 980, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-3PQG7***************************************2xF6. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+
+INFO:     127.0.0.1:52094 - "POST /api/messages HTTP/1.1" 200 OK
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/web/app.py", line 70, in add_message
+    response_message: Message = chatmanager.chat(
+                                ^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/chatmanager.py", line 29, in chat
+    flow.run(message=f"{message_text}", clear_history=False)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/workflowmanager.py", line 219, in run
+    self.sender.initiate_chat(
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 816, in initiate_chat
+    self.send(self.generate_init_message(**context), recipient, silent=silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 516, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 691, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1646, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1064, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1083, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 624, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 278, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 980, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-3PQG7***************************************2xF6. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+
+INFO:     127.0.0.1:33040 - "POST /api/messages HTTP/1.1" 200 OK
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/web/app.py", line 70, in add_message
+    response_message: Message = chatmanager.chat(
+                                ^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/chatmanager.py", line 29, in chat
+    flow.run(message=f"{message_text}", clear_history=False)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/workflowmanager.py", line 219, in run
+    self.sender.initiate_chat(
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 816, in initiate_chat
+    self.send(self.generate_init_message(**context), recipient, silent=silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 516, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 691, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1646, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1064, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1083, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 624, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 278, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 980, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-3PQG7***************************************2xF6. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+
+INFO:     127.0.0.1:33998 - "POST /api/messages HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47438 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:47438 - "GET /favicon-32x32.png?v=46131b614287332146ea078703a67d38 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47438 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47450 - "GET /api/version HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47450 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47450 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=7619aa95-c14d-4654-a9dd-0c65c2a1456c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47450 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=7619aa95-c14d-4654-a9dd-0c65c2a1456c HTTP/1.1" 200 OK
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+To use the `create_unit_tests` skill, I will provide you with a Python script that you can execute in your environment. This script will attempt to create unit tests for C++ files found in the specified Unit Under Test (UUT) directory within your working directory `/home/wilsonb/dl/github.com/BruceRayWilson/Accounting`.
+
+Please save the following code to a file and execute it with Python:
+
+```python
+# filename: create_unit_tests_script.py
+import os
+import json
+import subprocess
+
+def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src'):
+    base_url = 'http://127.0.0.1:5000/'
+    uut_path = os.path.join(parent_dir, uut_dir)
+    src_path = os.path.join(parent_dir, src_dir)
+
+    for path in [uut_path, src_path]:
+        if not os.path.exists(path):
+            os.makedirs(path)
+            print(f"Directory '{path}' was created.")
+        else:
+            print(f"Directory '{path}' already exists.")
+
+    request_url = f'{base_url}process-files'
+
+    for file_name in os.listdir(uut_path):
+        if file_name.endswith('.cpp'):
+            h_file_name = file_name.replace('.cpp', '.h')
+            cpp_file_path = os.path.join(uut_path, file_name)
+            h_file_path = os.path.join(uut_path, h_file_name)
+
+            if os.path.exists(h_file_path):
+                # Construct the curl command
+                curl_command = [
+                    "curl", "-X", "POST",
+                    "-F", f"hFileContent=@{h_file_path}",
+                    "-F", f"cppFileContent=@{cpp_file_path}",
+                    request_url
+                ]
+
+                # Execute the curl command
+                result = subprocess.run(curl_command, capture_output=True, text=True)
+
+                # Handle the output
+                if result.returncode == 0:
+                    try:
+                        data = json.loads(result.stdout)
+                        if 'status' in data and data['status'] == 'processing':
+                            print(f"Processing started for {file_name}. Task ID: {data.get('id')}")
+                        else:
+                            print(f"Error: {data.get('message')}")
+                    except json.JSONDecodeError:
+                        print(f"Non-JSON response received: {result.stdout}")
+                else:
+                    print(f"Error: {result.stderr.decode('utf-8')}")
+            else:
+                print(f"Matching .h file not found for {file_name}")
+
+# Replace the path below with the path to your working directory
+parent_directory = '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting'
+create_unit_tests(parent_directory)
+```
+
+Make sure to run this script in the environment where your local web server is running. The script will communicate with the server to process the C++ files and attempt to create unit tests.
+
+--------------------------------------------------------------------------------
+
+>>>>>>>> EXECUTING CODE BLOCK 0 (inferred language is python)...
+userproxy (to primary_assistant):
+
+exitcode: 0 (execution succeeded)
+Code output: 
+Directory '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting/UUT' already exists.
+Directory '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting/src' already exists.
+Processing started for A.cpp. Task ID: 70adb04e-77ac-42a4-b70c-639e3dc7cb11
+
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+The script has successfully started processing the C++ file `A.cpp` for unit test creation. It has provided a task ID `70adb04e-77ac-42a4-b70c-639e3dc7cb11`, which can be used to check the status of the task.
+
+Since the script has completed its execution without any errors and the task is being processed, you will need to wait for the task to complete. The script does not currently include functionality to check the status of the task or retrieve the results once the task is completed.
+
+If you need to check the status of the task or retrieve the results, you would typically do this by making a request to the appropriate endpoint on your local web server. This could be done by periodically polling the server with the task ID until the task is completed.
+
+If you would like to add this functionality to the script, please let me know, and I can provide you with the necessary code to do so. Otherwise, you may manually check the status of the task using the provided task ID through your local web server's interface or API.
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+TERMINATE
+
+--------------------------------------------------------------------------------
+Modified files:  1
+INFO:     127.0.0.1:46910 - "POST /api/messages HTTP/1.1" 200 OK
