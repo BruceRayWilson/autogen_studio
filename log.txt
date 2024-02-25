@@ -4759,3 +4759,441 @@ TERMINATE
 --------------------------------------------------------------------------------
 Modified files:  1
 INFO:     127.0.0.1:38138 - "POST /api/messages HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42434 - "GET /api/workflows?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42434 - "GET /api/skills?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60308 - "POST /api/skills HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32882 - "GET /api/agents?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32884 - "GET /api/agents?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32884 - "GET /api/models?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32884 - "GET /api/skills?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35916 - "POST /api/workflows HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35916 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35924 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=001061d9-4a10-4726-8d63-e3816653d0a4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35924 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=001061d9-4a10-4726-8d63-e3816653d0a4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38486 - "GET /api/workflows?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38486 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38486 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=f81d8525-ccff-415c-984c-6d283ad73fd8 HTTP/1.1" 200 OK
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions
+    yield
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request
+    raise exc
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_transports/default.py", line 232, in handle_request
+    with map_httpcore_exceptions():
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/web/app.py", line 70, in add_message
+    response_message: Message = chatmanager.chat(
+                                ^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/chatmanager.py", line 29, in chat
+    flow.run(message=f"{message_text}", clear_history=False)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/workflowmanager.py", line 219, in run
+    self.sender.initiate_chat(
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 816, in initiate_chat
+    self.send(self.generate_init_message(**context), recipient, silent=silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 516, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 691, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1646, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1064, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1083, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 624, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 278, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 942, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 942, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 952, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+INFO:     127.0.0.1:59358 - "POST /api/messages HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60736 - "GET /318ce576f236b79fd96f75904c13f6e55c3eee57-55b491ffd339ec08d0ca.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60736 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60752 - "GET /api/version HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60752 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60752 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=f81d8525-ccff-415c-984c-6d283ad73fd8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60752 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=f81d8525-ccff-415c-984c-6d283ad73fd8 HTTP/1.1" 200 OK
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_transports/default.py", line 69, in map_httpcore_exceptions
+    yield
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_transports/default.py", line 233, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpcore/_sync/connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 99, in handle_request
+    raise exc
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 76, in handle_request
+    stream = self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpcore/_sync/connection.py", line 122, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpcore/_backends/sync.py", line 205, in connect_tcp
+    with map_exceptions(exc_map):
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 918, in _request
+    response = self._client.send(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_client.py", line 1015, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_transports/default.py", line 232, in handle_request
+    with map_httpcore_exceptions():
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/httpx/_transports/default.py", line 86, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 101] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/web/app.py", line 70, in add_message
+    response_message: Message = chatmanager.chat(
+                                ^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/chatmanager.py", line 29, in chat
+    flow.run(message=f"{message_text}", clear_history=False)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/workflowmanager.py", line 219, in run
+    self.sender.initiate_chat(
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 816, in initiate_chat
+    self.send(self.generate_init_message(**context), recipient, silent=silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 516, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 691, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1646, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1064, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1083, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 624, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 278, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 942, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 942, in _request
+    return self._retry_request(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 1013, in _retry_request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/home/wilsonb/anaconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 952, in _request
+    raise APIConnectionError(request=request) from err
+openai.APIConnectionError: Connection error.
+
+INFO:     127.0.0.1:55192 - "POST /api/messages HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58086 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58092 - "GET /api/version HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58092 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58092 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=f81d8525-ccff-415c-984c-6d283ad73fd8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58092 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=f81d8525-ccff-415c-984c-6d283ad73fd8 HTTP/1.1" 200 OK
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+I am working in the /home/wilsonb/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+To use the `create_unit_tests` skill, I will generate Python code that you can execute. This code will create unit tests for C++ files found in the specified Unit Under Test (UUT) directory within your working directory `/home/wilsonb/dl/github.com/BruceRayWilson/Accounting`. The generated test files will be stored in a source directory.
+
+Please run the following Python code in your environment:
+
+```python
+# filename: create_unit_tests.py
+from skills import create_unit_tests
+
+# Set the parent directory where the UUT and source directories are located or will be created
+parent_dir = '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting'
+
+# Call the function to create unit tests
+create_unit_tests(parent_dir)
+```
+
+Make sure to save the above code in a file named `create_unit_tests.py` in the `/home/wilsonb/dl/github.com/BruceRayWilson/Accounting` directory and then run it with Python. This will initiate the process of creating unit tests for your C++ files.
+
+--------------------------------------------------------------------------------
+
+>>>>>>>> EXECUTING CODE BLOCK 0 (inferred language is python)...
+userproxy (to primary_assistant):
+
+exitcode: 1 (execution failed)
+Code output: 
+Traceback (most recent call last):
+  File "create_unit_tests.py", line 2, in <module>
+    from skills import create_unit_tests
+  File "skills.py", line 7, in <module>
+    from autogen.core import skill
+ModuleNotFoundError: No module named 'autogen.core'
+
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+It seems there was an error due to a missing module `autogen.core`. Since the `autogen.core` module is not available, we will need to adjust the code to remove the dependency on this module and directly execute the `create_unit_tests` function.
+
+I will provide you with the updated code that does not rely on the `autogen.core` module. Please run the following Python code in your environment:
+
+```python
+# filename: create_unit_tests.py
+
+import os
+import requests
+import time
+import json
+
+def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src'):
+    base_url = 'http://127.0.0.1:5000/'
+
+    def check_task_status(task_id: str):
+        check_url = f'{base_url}check-status/{task_id}'
+        while True:
+            response = requests.get(check_url)
+            if response.status_code == 200:
+                try:
+                    data = response.json()
+                    if data.get('status') == 'completed':
+                        return data
+                    elif data.get('status') == 'error':
+                        print(f"Error processing task {task_id}: {data.get('message')}")
+                        return None
+                except requests.exceptions.JSONDecodeError:
+                    print(f"Non-JSON response received: {response.text}")
+                    return None
+            else:
+                print(f"Failed to check task status. Status code: {response.status_code}")
+                return None
+            print(f"Task {task_id} is still processing. Checking again in 10 seconds...")
+            time.sleep(10)
+
+    uut_path = os.path.join(parent_dir, uut_dir)
+    src_path = os.path.join(parent_dir, src_dir)
+
+    for path in [uut_path, src_path]:
+        if not os.path.exists(path):
+            os.makedirs(path)
+            print(f"Directory '{path}' was created.")
+        else:
+            print(f"Directory '{path}' already exists.")
+
+    request_url = f'{base_url}process-files'
+
+    for file_name in os.listdir(uut_path):
+        if file_name.endswith('.cpp'):
+            h_file_name = file_name.replace('.cpp', '.h')
+            cpp_file_path = os.path.join(uut_path, file_name)
+            h_file_path = os.path.join(uut_path, h_file_name)
+
+            if os.path.exists(h_file_path):
+                with open(cpp_file_path, 'r') as cpp_file, open(h_file_path, 'r') as h_file:
+                    cpp_file_content = cpp_file.read()
+                    h_file_content = h_file.read()
+
+                    files = {
+                        'hFileContent': (h_file_name, h_file_content),
+                        'cppFileContent': (file_name, cpp_file_content)
+                    }
+
+                    response = requests.post(request_url, files=files)
+                    if response.status_code == 200:
+                        data = response.json()
+                        if data.get('status') == 'processing':
+                            print(f"Processing started for {file_name}. Task ID: {data.get('id')}")
+                            task_result = check_task_status(data.get('id'))
+                            if task_result:
+                                print(f"Task completed. Results: {task_result}")
+                        else:
+                            print(f"Error: {data.get('message')}")
+                    else:
+                        print(f"Failed to submit files. Status code: {response.status_code}")
+            else:
+                print(f"Matching .h file not found for {file_name}")
+
+# Set the parent directory where the UUT and source directories are located or will be created
+parent_dir = '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting'
+
+# Call the function to create unit tests
+create_unit_tests(parent_dir)
+```
+
+Make sure to save the above code in a file named `create_unit_tests.py` in the `/home/wilsonb/dl/github.com/BruceRayWilson/Accounting` directory and then run it with Python. This will initiate the process of creating unit tests for your C++ files.
+
+--------------------------------------------------------------------------------
+
+>>>>>>>> EXECUTING CODE BLOCK 0 (inferred language is python)...
+userproxy (to primary_assistant):
+
+exitcode: 0 (execution succeeded)
+Code output: 
+Directory '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting/UUT' already exists.
+Directory '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting/src' already exists.
+Processing started for A.cpp. Task ID: d6fe6df9-d0b8-487e-8e21-0eb2341f59c4
+Non-JSON response received: 
+
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+The code executed successfully, and it started processing the file `A.cpp`. However, it seems that there was an issue with receiving a JSON response from the server after submitting the file for processing. This could be due to various reasons, such as the server not sending a JSON response or an unexpected server error.
+
+Since the task ID was provided (`d6fe6df9-d0b8-487e-8e21-0eb2341f59c4`), we can attempt to check the status of the task manually using a curl command or by writing a small Python script to poll the server for the task status.
+
+Would you like to proceed with a Python script to check the status of the task, or would you prefer to use a curl command to manually check the status?
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+TERMINATE
+
+--------------------------------------------------------------------------------
+Modified files:  1
+INFO:     127.0.0.1:58332 - "POST /api/messages HTTP/1.1" 200 OK

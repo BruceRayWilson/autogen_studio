@@ -257,6 +257,7 @@ def retrieve_webpage_content(url: str):
 import os
 import requests
 import time
+import json
 
 def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src'):
     """
@@ -317,33 +318,62 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
 
 
 
-                    # Construct the 'files' dictionary to send as multipart/form-data
-                    files = {
-                        'hFileContent': (h_file_name, h_file_content),
-                        'cppFileContent': (file_name, cpp_file_content)
-                    }
+                    # # Construct the 'files' dictionary to send as multipart/form-data
+                    # files = {
+                    #     'hFileContent': (h_file_name, h_file_content),
+                    #     'cppFileContent': (file_name, cpp_file_content)
+                    # }
 
 
 
-                    print(f"JSON payload: {json.dumps(files)}")
+                    # print(f"JSON payload: {json.dumps(files)}")
 
-                    response = requests.post(request_url, files=files)
+                    # response = requests.post(request_url, files=files)
 
-                    if response.status_code == 200:
-                        try:
-                            print(f"response: {response}")
-                            data = response.json()
-                            if data.get('status') == 'processing':
-                                print(f"Processing started for {file_name}. Task ID: {data.get('id')}")
-                                task_result = check_task_status(data.get('id'))
-                                if task_result:
-                                    print(f"Task completed. Results: {task_result}")
-                            else:
-                                print(f"Error: {data.get('message')}")
-                        except requests.exceptions.JSONDecodeError:
-                            print(f"Non-JSON response received: {response.text}")
+
+
+
+                    import subprocess
+
+                    # Construct the curl command
+                    curl_command = [
+                        "curl", "-X", "POST",
+                        "-F", f"hFileContent=@{h_file_path}",
+                        "-F", f"cppFileContent=@{cpp_file_path}",
+                        request_url
+                    ]
+
+                    # Execute the curl command
+                    result = subprocess.run(curl_command, capture_output=True, text=True)
+
+                    # Handle the output
+                    if result.returncode == 0:
+                        print("Success:", result.stdout)
                     else:
-                        print(f"Failed to submit files. Status code: {response.status_code}")
+                        print("Error:", result.stderr)
+
+
+
+
+
+
+                    if result.returncode == 0:
+                        try:
+                            data = json.loads(result.stdout)
+                            if 'status' in data and data['status'] == 200:
+                                if data.get('status') == 'processing':
+                                    print(f"Processing started for {file_name}. Task ID: {data.get('id')}")
+                                    task_result = check_task_status(data.get('id'))
+                                    if task_result:
+                                        print(f"Task completed. Results: {task_result}")
+                                else:
+                                    print(f"Error: {data.get('message')}")
+                        except json.JSONDecodeError:
+                            print(f"Non-JSON response received: {result.stdout}")
+                    else:
+                        print(f"Failed to submit files. Command exited with return code: {result.returncode}")
+
+
             else:
                 print(f"Matching .h file not found for {file_name}")
 
