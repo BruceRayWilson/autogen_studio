@@ -1,29 +1,76 @@
 # filename: create_unit_tests.py
 import os
+import json
+import requests
+import time
 
 def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src'):
-    """
-    Placeholder function to create unit tests for C++ files found in the specified Unit Under Test (UUT) directory,
-    and stores the generated test files in the specified source directory.
-    """
+    base_url = 'http://127.0.0.1:5000/'
+
+    def check_task_status(task_id: str):
+        check_url = f'{base_url}check-status/{task_id}'
+        while True:
+            response = requests.get(check_url)
+            if response.status_code == 200:
+                data = response.json()
+                if data.get('status') == 'completed':
+                    return data
+                elif data.get('status') == 'error':
+                    print(f"Error processing task {task_id}: {data.get('message')}")
+                    return None
+            else:
+                print(f"Failed to check task status. Status code: {response.status_code}")
+                return None
+            print(f"Task {task_id} is still processing. Checking again in 10 seconds...")
+            time.sleep(10)
+
     uut_path = os.path.join(parent_dir, uut_dir)
     src_path = os.path.join(parent_dir, src_dir)
 
-    # Ensure both UUT and src directories exist
     for path in [uut_path, src_path]:
         if not os.path.exists(path):
             os.makedirs(path)
             print(f"Directory '{path}' was created.")
         else:
             print(f"Directory '{path}' already exists.")
-    
-    # Placeholder for the actual unit test generation logic
+
+    request_url = f'{base_url}process-files'
+
     for file_name in os.listdir(uut_path):
         if file_name.endswith('.cpp'):
-            # Here you would generate unit tests for each .cpp file
-            # For example, you might use a tool or write custom logic to parse the C++ file and create tests
-            print(f"Unit tests should be created for: {file_name}")
-            # The generated test files would then be saved to the src_path directory
+            h_file_name = file_name.replace('.cpp', '.h')
+            cpp_file_path = os.path.join(uut_path, file_name)
+            h_file_path = os.path.join(uut_path, h_file_name)
 
-# Replace '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting' with the actual path to your directory
-create_unit_tests('/home/wilsonb/dl/github.com/BruceRayWilson/Accounting')
+            if os.path.exists(h_file_path):
+                with open(cpp_file_path, 'r') as cpp_file, open(h_file_path, 'r') as h_file:
+                    cpp_file_content = cpp_file.read()
+                    h_file_content = h_file.read()
+
+                    print(f"cpp_file_content (first 100 chars): {cpp_file_content[:100]}")
+                    print(f"h_file_content (first 100 chars): {h_file_content[:100]}")
+
+                    json_payload = {
+                        'cppFileContent': cpp_file_content,
+                        'hFileContent': h_file_content
+                    }
+                    print(f"JSON payload: {json.dumps(json_payload)[:100]}")
+
+                    response = requests.post(request_url, json=json_payload)
+
+                    if response.status_code == 200:
+                        data = response.json()
+                        if data.get('status') == 'processing':
+                            print(f"Processing started for {file_name}. Task ID: {data.get('id')}")
+                            task_result = check_task_status(data.get('id'))
+                            if task_result:
+                                print(f"Task completed. Results: {task_result}")
+                        else:
+                            print(f"Error: {data.get('message')}")
+                    else:
+                        print(f"Failed to submit files. Status code: {response.status_code}")
+            else:
+                print(f"Matching .h file not found for {file_name}")
+
+parent_dir = '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting'
+create_unit_tests(parent_dir)

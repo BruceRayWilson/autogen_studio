@@ -2,7 +2,6 @@
 import os
 import requests
 import time
-import json
 
 def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src'):
     base_url = 'http://127.0.0.1:5000/'
@@ -76,8 +75,6 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
             else:
                 print(f"Matching .h file not found for {file_name}")
 
-# Define the parent directory where the UUT and src directories are located
+# Replace the path below with the path to your directory
 parent_dir = '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting'
-
-# Call the function to create unit tests
 create_unit_tests(parent_dir)

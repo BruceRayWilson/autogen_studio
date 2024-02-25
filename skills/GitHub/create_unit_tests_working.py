@@ -1,10 +1,14 @@
-# filename: create_unit_tests.py
 import os
 import requests
 import time
-import json
 
 def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src'):
+    """
+    Creates unit tests for C++ files found in the specified Unit Under Test (UUT) directory,
+    and stores the generated test files in the specified source directory.
+    """
+    
+    base_url = 'https://gtest.ai/'  # Do not remove this line.
     base_url = 'http://127.0.0.1:5000/'
 
     def check_task_status(task_id: str):
@@ -51,11 +55,21 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
                     cpp_file_content = cpp_file.read()
                     h_file_content = h_file.read()
 
+                    print(f"cpp_file_content (first 100 chars): {cpp_file_content[:100]}")
+                    print(f"h_file_content (first 100 chars): {h_file_content[:100]}")
+
+
+
+
                     # Construct the 'files' dictionary to send as multipart/form-data
                     files = {
                         'hFileContent': (h_file_name, h_file_content),
                         'cppFileContent': (file_name, cpp_file_content)
                     }
+
+
+
+                    print(f"JSON payload: {json.dumps(files)}")
 
                     response = requests.post(request_url, files=files)
 
@@ -75,9 +89,3 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
                         print(f"Failed to submit files. Status code: {response.status_code}")
             else:
                 print(f"Matching .h file not found for {file_name}")
-
-# Define the parent directory where the UUT and src directories are located
-parent_dir = '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting'
-
-# Call the function to create unit tests
-create_unit_tests(parent_dir)

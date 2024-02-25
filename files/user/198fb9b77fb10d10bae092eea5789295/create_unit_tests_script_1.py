@@ -1,8 +1,8 @@
 # filename: create_unit_tests_script.py
 from skills import create_unit_tests
 
-# The parent directory where the UUT and src directories are located
+# Set the parent directory where the UUT and src directories are located
 parent_dir = '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting'
 
-# Call the create_unit_tests function
+# Call the function to create unit tests
 create_unit_tests(parent_dir)

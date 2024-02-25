@@ -1,13 +1,13 @@
-# filename: create_unit_tests_simulation.py
+# filename: create_unit_tests_with_auth.py
 import os
 import requests
 import time
 import json
 
-def check_task_status(base_url, task_id):
+def check_task_status(base_url, task_id, headers):
     check_url = f'{base_url}check-status/{task_id}'
     while True:
-        response = requests.get(check_url)
+        response = requests.get(check_url, headers=headers)
         if response.status_code == 200:
             data = response.json()
             if data.get('status') == 'completed':
@@ -21,7 +21,7 @@ def check_task_status(base_url, task_id):
         print(f"Task {task_id} is still processing. Checking again in 10 seconds...")
         time.sleep(10)
 
-def create_unit_tests_simulation(parent_dir, base_url):
+def create_unit_tests_with_auth(parent_dir, base_url, headers):
     uut_dir = 'UUT'
     uut_path = os.path.join(parent_dir, uut_dir)
 
@@ -37,13 +37,13 @@ def create_unit_tests_simulation(parent_dir, base_url):
             with open(cpp_file_path, 'r') as cpp_file:
                 cpp_file_content = cpp_file.read()
                 json_payload = {'cppFileContent': cpp_file_content}
-                response = requests.post(request_url, json=json_payload)
+                response = requests.post(request_url, json=json_payload, headers=headers)
 
                 if response.status_code == 200:
                     data = response.json()
                     if data.get('status') == 'processing':
                         print(f"Processing started for {file_name}. Task ID: {data.get('id')}")
-                        task_result = check_task_status(base_url, data.get('id'))
+                        task_result = check_task_status(base_url, data.get('id'), headers)
                         if task_result:
                             print(f"Task completed. Results: {task_result}")
                     else:
@@ -55,5 +55,10 @@ def create_unit_tests_simulation(parent_dir, base_url):
 parent_dir = '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting'
 # Set the base URL of your web server
 base_url = 'http://127.0.0.1:5000/'
+# Replace 'YourAuthToken' with the actual token or credentials required by your server
+auth_token = 'YourAuthToken'
+headers = {
+    'Authorization': f'Bearer {auth_token}'
+}
 
-create_unit_tests_simulation(parent_dir, base_url)
+create_unit_tests_with_auth(parent_dir, base_url, headers)

@@ -1,10 +1,12 @@
-# filename: create_unit_tests.py
 import os
 import json
 import requests
 import time
 
 def check_task_status(task_id: str):
+    """
+    Polls the status of a task until it completes.
+    """
     check_url = f'https://gtest.ai/check-status/{task_id}'
     while True:
         response = requests.get(check_url)
@@ -19,12 +21,17 @@ def check_task_status(task_id: str):
             print(f"Failed to check task status. Status code: {response.status_code}")
             return None
         print(f"Task {task_id} is still processing. Checking again in 10 seconds...")
-        time.sleep(10)
+        time.sleep(10)  # Wait for 10 seconds before checking again
 
 def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src'):
+    """
+    Creates unit tests for C++ files found in the specified Unit Under Test (UUT) directory,
+    and stores the generated test files in the specified source directory.
+    """
     uut_path = os.path.join(parent_dir, uut_dir)
     src_path = os.path.join(parent_dir, src_dir)
 
+    # Ensure both UUT and src directories exist
     for path in [uut_path, src_path]:
         if not os.path.exists(path):
             os.makedirs(path)
@@ -32,6 +39,7 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
         else:
             print(f"Directory '{path}' already exists.")
     
+    # Prepare and submit files
     for file_name in os.listdir(uut_path):
         if file_name.endswith('.cpp'):
             h_file_name = file_name.replace('.cpp', '.h')
@@ -52,8 +60,10 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
                         data = response.json()
                         if data.get('status') == 'processing':
                             print(f"Processing started for {file_name}. Task ID: {data.get('id')}")
+                            # Call the function to check the task status
                             task_result = check_task_status(data.get('id'))
                             if task_result:
+                                # TODO: Handle the completed task result, e.g., saving generated test files
                                 print(f"Task completed. Results: {task_result}")
                         else:
                             print(f"Error: {data.get('message')}")
@@ -61,9 +71,3 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
                         print(f"Failed to submit files. Status code: {response.status_code}")
             else:
                 print(f"Matching .h file not found for {file_name}")
-
-# Specify the parent directory where the UUT and source directories are located
-parent_dir = '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting'
-
-# Call the create_unit_tests function
-create_unit_tests(parent_dir)
