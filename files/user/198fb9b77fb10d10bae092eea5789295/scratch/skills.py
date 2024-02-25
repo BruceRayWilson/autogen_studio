@@ -327,23 +327,6 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
 
 
 
-                    # # Construct the 'files' dictionary to send as multipart/form-data
-                    # files = {
-                    #     'hFileContent': (h_file_name, h_file_content),
-                    #     'cppFileContent': (file_name, cpp_file_content)
-                    # }
-
-
-
-                    # print(f"JSON payload: {json.dumps(files)}")
-
-                    # response = requests.post(request_url, files=files)
-
-
-
-
-                    import subprocess
-
                     # Construct the curl command
                     curl_command = [
                         "curl", "-X", "POST",

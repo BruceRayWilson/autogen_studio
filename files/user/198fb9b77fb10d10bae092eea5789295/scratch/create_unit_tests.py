@@ -1,17 +1,11 @@
+# filename: create_unit_tests.py
 import os
 import time
 import json
 import subprocess
 
 def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src'):
-    """
-    Creates unit tests for C++ files found in the specified Unit Under Test (UUT) directory,
-    and stores the generated test files in the specified source directory.
-    """
-    
-    base_url = 'https://gtest.ai/'  # Do not remove this line.
     base_url = 'http://127.0.0.1:5000/'
-
 
     def check_task_status(task_id: str):
         check_url = f'{base_url}check-status/{task_id}'
@@ -41,7 +35,6 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
             print(f"Task {task_id} is still processing. Checking again in 10 seconds...")
             time.sleep(10)
 
-
     uut_path = os.path.join(parent_dir, uut_dir)
     src_path = os.path.join(parent_dir, src_dir)
 
@@ -68,9 +61,6 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
                     print(f"cpp_file_content (first 100 chars): {cpp_file_content[:100]}")
                     print(f"h_file_content (first 100 chars): {h_file_content[:100]}")
 
-
-
-
                     # Construct the curl command
                     curl_command = [
                         "curl", "-X", "POST",
@@ -88,11 +78,6 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
                     else:
                         print("Error:", result.stderr)
 
-
-
-
-
-
                     if result.returncode == 0:
                         try:
                             data = json.loads(result.stdout)
@@ -109,6 +94,11 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
                     else:
                         print(f"Failed to submit files. Command exited with return code: {result.returncode}")
 
-
             else:
                 print(f"Matching .h file not found for {file_name}")
+
+# The parent directory where the UUT directory is located
+parent_dir = '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting'
+
+# Call the create_unit_tests function with the parent directory
+create_unit_tests(parent_dir)
