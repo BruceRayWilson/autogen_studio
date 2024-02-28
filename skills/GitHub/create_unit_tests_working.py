@@ -93,21 +93,21 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
 
 
 
-                    if result.returncode == 0:
-                        try:
-                            data = json.loads(result.stdout)
-                            if 'status' in data and data['status'] == 200:
-                                if data.get('status') == 'processing':
-                                    print(f"Processing started for {file_name}. Task ID: {data.get('id')}")
-                                    task_result = check_task_status(data.get('id'))
-                                    if task_result:
-                                        print(f"Task completed. Results: {task_result}")
-                                else:
-                                    print(f"Error: {data.get('message')}")
-                        except json.JSONDecodeError:
-                            print(f"Non-JSON response received: {result.stdout}")
-                    else:
-                        print(f"Failed to submit files. Command exited with return code: {result.returncode}")
+                    # if result.returncode == 0:
+                    #     try:
+                    #         data = json.loads(result.stdout)
+                    #         if 'status' in data and data['status'] == 200:
+                    #             if data.get('status') == 'processing':
+                    #                 print(f"Processing started for {file_name}. Task ID: {data.get('id')}")
+                    #                 task_result = check_task_status(data.get('id'))
+                    #                 if task_result:
+                    #                     print(f"Task completed. Results: {task_result}")
+                    #             else:
+                    #                 print(f"Error: {data.get('message')}")
+                    #     except json.JSONDecodeError:
+                    #         print(f"Non-JSON response received: {result.stdout}")
+                    # else:
+                    #     print(f"Failed to submit files. Command exited with return code: {result.returncode}")
 
 
             else:

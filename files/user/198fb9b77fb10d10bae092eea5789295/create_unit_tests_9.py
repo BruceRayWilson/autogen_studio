@@ -97,8 +97,8 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
             else:
                 print(f"Matching .h file not found for {file_name}")
 
-# The parent directory where the UUT directory is located
+# Set the parent directory where the UUT and src directories are located
 parent_dir = '/home/wilsonb/dl/github.com/BruceRayWilson/Accounting'
 
-# Call the create_unit_tests function with the parent directory
+# Call the function to create unit tests
 create_unit_tests(parent_dir)

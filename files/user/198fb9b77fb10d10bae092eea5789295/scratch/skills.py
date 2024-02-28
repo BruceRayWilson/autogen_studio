@@ -349,26 +349,63 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
 
 
 
-                    if result.returncode == 0:
-                        try:
-                            data = json.loads(result.stdout)
-                            if 'status' in data and data['status'] == 200:
-                                if data.get('status') == 'processing':
-                                    print(f"Processing started for {file_name}. Task ID: {data.get('id')}")
-                                    task_result = check_task_status(data.get('id'))
-                                    if task_result:
-                                        print(f"Task completed. Results: {task_result}")
-                                else:
-                                    print(f"Error: {data.get('message')}")
-                        except json.JSONDecodeError:
-                            print(f"Non-JSON response received: {result.stdout}")
-                    else:
-                        print(f"Failed to submit files. Command exited with return code: {result.returncode}")
+                    # if result.returncode == 0:
+                    #     try:
+                    #         data = json.loads(result.stdout)
+                    #         if 'status' in data and data['status'] == 200:
+                    #             if data.get('status') == 'processing':
+                    #                 print(f"Processing started for {file_name}. Task ID: {data.get('id')}")
+                    #                 task_result = check_task_status(data.get('id'))
+                    #                 if task_result:
+                    #                     print(f"Task completed. Results: {task_result}")
+                    #             else:
+                    #                 print(f"Error: {data.get('message')}")
+                    #     except json.JSONDecodeError:
+                    #         print(f"Non-JSON response received: {result.stdout}")
+                    # else:
+                    #     print(f"Failed to submit files. Command exited with return code: {result.returncode}")
 
 
             else:
                 print(f"Matching .h file not found for {file_name}")
 
 #### End of create_unit_tests ####
+
+        
+
+##### Begin of check_task_id_status #####
+
+import subprocess
+import shlex
+
+def check_task_id_status(task_id):
+    """
+    Executes a curl command to check the status of a task by its ID.
+
+    :param task_id: str, the unique identifier of the task to check.
+    :return: The output from the curl command, which should be the response from the server.
+    """
+    # Construct the curl command with the provided task ID
+    command = f"curl http://127.0.0.1:5000/check-status/{task_id}"
+    
+    # Use shlex.split to ensure the command is properly split for subprocess
+    args = shlex.split(command)
+    
+    try:
+        # Execute the curl command
+        result = subprocess.run(args, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        
+        # Return the standard output from curl command
+        return result.stdout
+    except subprocess.CalledProcessError as e:
+        # Return the standard error if the command failed
+        return f"Command failed with error: {e.stderr}"
+
+# Example usage
+# task_id = "your_task_id_here"
+# print(curl_check_task_status(task_id))
+
+
+#### End of check_task_id_status ####
 
         
