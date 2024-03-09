@@ -8288,3 +8288,806 @@ TERMINATE
 --------------------------------------------------------------------------------
 Modified files:  3
 INFO:     127.0.0.1:43630 - "POST /api/messages HTTP/1.1" 200 OK
+***** App started *****
+INFO:     127.0.0.1:52614 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52614 - "GET /manifest.webmanifest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52615 - "GET /images/svgs/welcome.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52616 - "GET /app-459ab408106051249ce7.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52617 - "GET /framework-0e118549f33203964972.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52618 - "GET /webpack-runtime-8ac8f64b53282ba8f2ef.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52614 - "GET /page-data/app-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52615 - "GET /page-data/index/page-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52614 - "GET /318ce576f236b79fd96f75904c13f6e55c3eee57-f6b02228d9af0addd9a7.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52615 - "GET /6c05b3ab656a8bfc225a64b3d73a36a92f83c05e-2ded8b623c6b4983337a.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52616 - "GET /component---src-pages-index-tsx-1c73eed9173d78f95348.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52621 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52621 - "GET /manifest.webmanifest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52622 - "GET /images/svgs/welcome.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52624 - "GET /framework-0e118549f33203964972.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52623 - "GET /app-459ab408106051249ce7.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52625 - "GET /webpack-runtime-8ac8f64b53282ba8f2ef.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52621 - "GET /page-data/app-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52622 - "GET /page-data/index/page-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52623 - "GET /component---src-pages-index-tsx-1c73eed9173d78f95348.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52621 - "GET /318ce576f236b79fd96f75904c13f6e55c3eee57-f6b02228d9af0addd9a7.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52622 - "GET /6c05b3ab656a8bfc225a64b3d73a36a92f83c05e-2ded8b623c6b4983337a.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52641 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52641 - "GET /images/svgs/welcome.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52643 - "GET /app-459ab408106051249ce7.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52643 - "GET /framework-0e118549f33203964972.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52641 - "GET /webpack-runtime-8ac8f64b53282ba8f2ef.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52643 - "GET /page-data/app-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52641 - "GET /page-data/index/page-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52643 - "GET /6c05b3ab656a8bfc225a64b3d73a36a92f83c05e-2ded8b623c6b4983337a.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52641 - "GET /318ce576f236b79fd96f75904c13f6e55c3eee57-f6b02228d9af0addd9a7.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52648 - "GET /manifest.webmanifest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52649 - "GET /component---src-pages-index-tsx-1c73eed9173d78f95348.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52647 - "GET /favicon-32x32.png?v=46131b614287332146ea078703a67d38 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52641 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52647 - "GET /api/version HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52649 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52649 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=75284cc8-2def-41f4-9bc7-819cbc40cad6 HTTP/1.1" 200 OK
+New Connection: 2f9a6aa6-615c-4510-87d3-13729fe05342, Total: 1
+INFO:     127.0.0.1:52649 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=75284cc8-2def-41f4-9bc7-819cbc40cad6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52649 - "GET /page-data/gallery/page-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52647 - "GET /page-data/build/page-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52647 - "GET /page-data/gallery/page-data.json HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52649 - "GET /page-data/build/page-data.json HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:52649 - "GET /component---src-pages-gallery-index-tsx-5ff580b1b90969727553.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52647 - "GET /component---src-pages-build-tsx-7fe52f0501ed4c5d5dbb.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52659 - "GET /api/workflows?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52659 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52659 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=5a1831b5-073c-42bd-b355-1d6a321e7150 HTTP/1.1" 200 OK
+userproxy (to primary_assistant):
+
+I am working in the ~/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/web/app.py", line 110, in add_message
+    response_message: Message = managers["chat"].chat(
+                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/chatmanager.py", line 70, in chat
+    flow.run(message=f"{message_text}", clear_history=False)
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/workflowmanager.py", line 235, in run
+    self.sender.initiate_chat(
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 838, in initiate_chat
+    self.send(self.generate_init_message(**context), recipient, silent=silent)
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 530, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/workflowmanager.py", line 257, in receive
+    super().receive(message, sender, request_reply, silent)
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 692, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1665, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1081, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1100, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 624, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 278, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 980, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-GxSQR***************************************cKCb. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+
+INFO:     127.0.0.1:52676 - "POST /api/messages HTTP/1.1" 200 OK
+userproxy (to primary_assistant):
+
+I am working in the ~/dl/github.com/BruceRayWilson/Accounting directory. Use the skill create_unit_tests. I have the local web server running.
+
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/web/app.py", line 110, in add_message
+    response_message: Message = managers["chat"].chat(
+                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/chatmanager.py", line 70, in chat
+    flow.run(message=f"{message_text}", clear_history=False)
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/workflowmanager.py", line 235, in run
+    self.sender.initiate_chat(
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 838, in initiate_chat
+    self.send(self.generate_init_message(**context), recipient, silent=silent)
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 530, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/workflowmanager.py", line 257, in receive
+    super().receive(message, sender, request_reply, silent)
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 692, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1665, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1081, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1100, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 624, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 278, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 980, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-GxSQR***************************************cKCb. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+
+INFO:     127.0.0.1:52687 - "POST /api/messages HTTP/1.1" 200 OK
+Client #2f9a6aa6-615c-4510-87d3-13729fe05342 is disconnected
+Connection Closed. Total: 0
+New Connection: 2f9a6aa6-615c-4510-87d3-13729fe05342, Total: 1
+Client #2f9a6aa6-615c-4510-87d3-13729fe05342 is disconnected
+Connection Closed. Total: 0
+New Connection: 2f9a6aa6-615c-4510-87d3-13729fe05342, Total: 1
+Client #2f9a6aa6-615c-4510-87d3-13729fe05342 is disconnected
+Connection Closed. Total: 0
+***** App stopped *****
+***** App started *****
+***** App stopped *****
+***** App started *****
+INFO:     127.0.0.1:53274 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53274 - "GET /manifest.webmanifest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53275 - "GET /images/svgs/welcome.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53276 - "GET /app-459ab408106051249ce7.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53277 - "GET /framework-0e118549f33203964972.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53278 - "GET /webpack-runtime-8ac8f64b53282ba8f2ef.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53274 - "GET /page-data/app-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53275 - "GET /page-data/index/page-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53276 - "GET /favicon-32x32.png?v=46131b614287332146ea078703a67d38 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53274 - "GET /318ce576f236b79fd96f75904c13f6e55c3eee57-f6b02228d9af0addd9a7.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53275 - "GET /6c05b3ab656a8bfc225a64b3d73a36a92f83c05e-2ded8b623c6b4983337a.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53277 - "GET /component---src-pages-index-tsx-1c73eed9173d78f95348.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53274 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53275 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53276 - "GET /api/version HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53274 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=5a1831b5-073c-42bd-b355-1d6a321e7150 HTTP/1.1" 200 OK
+New Connection: 2f21cf48-a3d9-4a7a-afe5-ab35c1ebf624, Total: 1
+INFO:     127.0.0.1:53274 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=5a1831b5-073c-42bd-b355-1d6a321e7150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53275 - "GET /page-data/gallery/page-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53274 - "GET /page-data/build/page-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53274 - "GET /component---src-pages-gallery-index-tsx-5ff580b1b90969727553.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53275 - "GET /component---src-pages-build-tsx-7fe52f0501ed4c5d5dbb.js HTTP/1.1" 200 OK
+Client #2f21cf48-a3d9-4a7a-afe5-ab35c1ebf624 is disconnected
+Connection Closed. Total: 0
+INFO:     127.0.0.1:53285 - "GET /api/workflows?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53285 - "GET /api/skills?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53292 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53292 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=5a1831b5-073c-42bd-b355-1d6a321e7150 HTTP/1.1" 200 OK
+New Connection: 2f21cf48-a3d9-4a7a-afe5-ab35c1ebf624, Total: 1
+INFO:     127.0.0.1:53292 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=5a1831b5-073c-42bd-b355-1d6a321e7150 HTTP/1.1" 200 OK
+userproxy (to primary_assistant):
+
+Init a git repo for me at ~/dl/github.com/BruceRayWilson/junk.
+
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/web/app.py", line 110, in add_message
+    response_message: Message = managers["chat"].chat(
+                                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/chatmanager.py", line 70, in chat
+    flow.run(message=f"{message_text}", clear_history=False)
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/workflowmanager.py", line 235, in run
+    self.sender.initiate_chat(
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 838, in initiate_chat
+    self.send(self.generate_init_message(**context), recipient, silent=silent)
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 530, in send
+    recipient.receive(message, self, request_reply, silent)
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogenstudio/workflowmanager.py", line 257, in receive
+    super().receive(message, sender, request_reply, silent)
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 692, in receive
+    reply = self.generate_reply(messages=self.chat_messages[sender], sender=sender)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1665, in generate_reply
+    final, reply = reply_func(self, messages=messages, sender=sender, config=reply_func_tuple["config"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1081, in generate_oai_reply
+    extracted_response = self._generate_oai_reply_from_client(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/agentchat/conversable_agent.py", line 1100, in _generate_oai_reply_from_client
+    response = llm_client.create(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 624, in create
+    response = client.create(params)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/autogen/oai/client.py", line 278, in create
+    response = completions.create(**params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/openai/_utils/_utils.py", line 275, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/openai/resources/chat/completions.py", line 663, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 1200, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 889, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Users/wilsonb/miniconda3/envs/autogen/lib/python3.11/site-packages/openai/_base_client.py", line 980, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-GxSQR***************************************cKCb. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+
+INFO:     127.0.0.1:53300 - "POST /api/messages HTTP/1.1" 200 OK
+Client #2f21cf48-a3d9-4a7a-afe5-ab35c1ebf624 is disconnected
+Connection Closed. Total: 0
+***** App stopped *****
+***** App started *****
+New Connection: 2f21cf48-a3d9-4a7a-afe5-ab35c1ebf624, Total: 1
+userproxy (to primary_assistant):
+
+Init a git repo for me at ~/dl/github.com/BruceRayWilson/junk.
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+```python
+# filename: init_repo.py
+from skills import init_repo
+
+# Initialize a Git repository in the specified directory
+init_repo("~/dl/github.com/BruceRayWilson/junk")
+```
+
+Please save the above code to a file named `init_repo.py` and execute it to initialize a Git repository at the specified location.
+
+--------------------------------------------------------------------------------
+
+>>>>>>>> EXECUTING CODE BLOCK 0 (inferred language is python)...
+userproxy (to primary_assistant):
+
+exitcode: 1 (execution failed)
+Code output: 
+Traceback (most recent call last):
+  File "init_repo.py", line 2, in <module>
+    from skills import init_repo
+  File "skills.py", line 7, in <module>
+    from autogen.core import skill
+ModuleNotFoundError: No module named 'autogen.core'
+
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+It seems there was an issue with importing the required module from `skills.py`. Let's try a different approach by directly using the code for initializing a Git repository without importing from `skills.py`. I will provide you with the complete code to execute.
+
+```python
+# filename: init_repo_direct.py
+import os
+import subprocess
+
+def init_repo(directory: str):
+    """
+    Initializes a Git repository in the specified directory.
+    If the directory does not exist, it is created.
+    """
+    # Expand the user's home directory symbol '~' to the full path
+    directory = os.path.expanduser(directory)
+    
+    # Check if the directory exists
+    if not os.path.exists(directory):
+        # Create the directory if it does not exist
+        os.makedirs(directory)
+        print(f"Directory '{directory}' was created.")
+    else:
+        print(f"Directory '{directory}' already exists.")
+    
+    # Change the current working directory to the specified directory
+    os.chdir(directory)
+    
+    # Initialize the Git repository
+    result = subprocess.run(["git", "init"], capture_output=True, text=True)
+    if result.returncode == 0:
+        print("Git repository initialized successfully.")
+    else:
+        print("Failed to initialize Git repository:", result.stderr)
+
+# Initialize a Git repository in the specified directory
+init_repo("~/dl/github.com/BruceRayWilson/junk")
+```
+
+Please save the above code to a file named `init_repo_direct.py` and execute it to initialize a Git repository at the specified location.
+
+--------------------------------------------------------------------------------
+
+>>>>>>>> EXECUTING CODE BLOCK 0 (inferred language is python)...
+userproxy (to primary_assistant):
+
+exitcode: 0 (execution succeeded)
+Code output: 
+Directory '/Users/wilsonb/dl/github.com/BruceRayWilson/junk' was created.
+Git repository initialized successfully.
+
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+The Git repository at `/Users/wilsonb/dl/github.com/BruceRayWilson/junk` has been successfully initialized. If you have any more tasks or need further assistance, feel free to ask. Otherwise, if everything is done, you can let me know.
+
+TERMINATE
+
+--------------------------------------------------------------------------------
+Modified files:  2
+INFO:     127.0.0.1:53347 - "POST /api/messages HTTP/1.1" 200 OK
+***** App started *****
+INFO:     127.0.0.1:49293 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49293 - "GET /manifest.webmanifest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49293 - "GET /images/svgs/welcome.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49296 - "GET /webpack-runtime-8ac8f64b53282ba8f2ef.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49294 - "GET /app-459ab408106051249ce7.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49295 - "GET /framework-0e118549f33203964972.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49293 - "GET /page-data/app-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49294 - "GET /page-data/index/page-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49294 - "GET /6c05b3ab656a8bfc225a64b3d73a36a92f83c05e-2ded8b623c6b4983337a.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49295 - "GET /component---src-pages-index-tsx-1c73eed9173d78f95348.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49293 - "GET /318ce576f236b79fd96f75904c13f6e55c3eee57-f6b02228d9af0addd9a7.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49297 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49297 - "GET /manifest.webmanifest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49298 - "GET /images/svgs/welcome.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49299 - "GET /app-459ab408106051249ce7.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49301 - "GET /webpack-runtime-8ac8f64b53282ba8f2ef.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49300 - "GET /framework-0e118549f33203964972.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49297 - "GET /page-data/app-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49298 - "GET /page-data/index/page-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49298 - "GET /6c05b3ab656a8bfc225a64b3d73a36a92f83c05e-2ded8b623c6b4983337a.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49299 - "GET /component---src-pages-index-tsx-1c73eed9173d78f95348.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49297 - "GET /318ce576f236b79fd96f75904c13f6e55c3eee57-f6b02228d9af0addd9a7.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49302 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49303 - "GET /app-459ab408106051249ce7.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49302 - "GET /images/svgs/welcome.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49302 - "GET /webpack-runtime-8ac8f64b53282ba8f2ef.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49303 - "GET /framework-0e118549f33203964972.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49302 - "GET /page-data/index/page-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49303 - "GET /page-data/app-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49303 - "GET /318ce576f236b79fd96f75904c13f6e55c3eee57-f6b02228d9af0addd9a7.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49302 - "GET /6c05b3ab656a8bfc225a64b3d73a36a92f83c05e-2ded8b623c6b4983337a.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49304 - "GET /component---src-pages-index-tsx-1c73eed9173d78f95348.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49306 - "GET /favicon-32x32.png?v=46131b614287332146ea078703a67d38 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49305 - "GET /manifest.webmanifest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49303 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49304 - "GET /api/version HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49302 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49302 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=5a1831b5-073c-42bd-b355-1d6a321e7150 HTTP/1.1" 200 OK
+New Connection: 9214c00f-aa47-4662-92de-c534a7521d93, Total: 1
+INFO:     127.0.0.1:49302 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=5a1831b5-073c-42bd-b355-1d6a321e7150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49304 - "GET /page-data/gallery/page-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49302 - "GET /page-data/build/page-data.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49304 - "GET /component---src-pages-build-tsx-7fe52f0501ed4c5d5dbb.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49302 - "GET /component---src-pages-gallery-index-tsx-5ff580b1b90969727553.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49312 - "GET /api/workflows?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+Client #9214c00f-aa47-4662-92de-c534a7521d93 is disconnected
+Connection Closed. Total: 0
+INFO:     127.0.0.1:49312 - "GET /api/skills?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49315 - "POST /api/skills HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49316 - "GET /api/agents?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49316 - "GET /api/agents?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49317 - "GET /api/models?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49318 - "GET /api/skills?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49320 - "POST /api/workflows HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49321 - "GET /api/sessions?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49323 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=5a1831b5-073c-42bd-b355-1d6a321e7150 HTTP/1.1" 200 OK
+New Connection: 9214c00f-aa47-4662-92de-c534a7521d93, Total: 1
+INFO:     127.0.0.1:49323 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=5a1831b5-073c-42bd-b355-1d6a321e7150 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49324 - "GET /api/workflows?user_id=guestuser@gmail.com HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49324 - "POST /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49324 - "GET /api/messages?user_id=guestuser@gmail.com&session_id=905d0cae-5225-4e4d-b334-9fc7a10514ed HTTP/1.1" 200 OK
+userproxy (to primary_assistant):
+
+I am working in the ~/dl/github.com/BruceRayWilson/Accounting directory. Please create unit tests.
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+To create unit tests for the C++ files found in the `~/dl/github.com/BruceRayWilson/Accounting` directory, I will use the `create_unit_tests` function from the provided skills. This function will generate unit tests for the C++ files and store them in a specified source directory.
+
+Before proceeding, I need to clarify the structure of your project. Typically, the source files (`.cpp` and `.h`) are located in a specific directory, and the unit tests are to be placed in another. The `create_unit_tests` function expects a parent directory, a Unit Under Test (UUT) directory where the C++ files are located, and a source directory where the generated test files will be stored.
+
+Since I don't have the exact structure of your project, I will assume that the C++ files are located directly within the `~/dl/github.com/BruceRayWilson/Accounting` directory and that you want the generated test files to be stored in a subdirectory named `tests`.
+
+Let's proceed with this assumption. If the structure is different, please adjust the paths accordingly.
+
+Please execute the following Python code to create the unit tests:
+
+```python
+# filename: create_unit_tests.py
+from skills import create_unit_tests
+
+# Define the parent directory where the C++ files are located
+parent_dir = '~/dl/github.com/BruceRayWilson/Accounting'
+
+# Define the subdirectory for Unit Under Test (UUT) and source directory for tests
+# Assuming the C++ files are in the parent directory and tests should be in a subdirectory named 'tests'
+uut_dir = '.'  # Current directory as UUT
+src_dir = 'tests'  # Subdirectory for tests
+
+# Create unit tests
+create_unit_tests(parent_dir, uut_dir, src_dir)
+```
+
+Please save the above code to a file named `create_unit_tests.py` in the `~/dl/github.com/BruceRayWilson/Accounting` directory and execute it. If the directory structure is different, modify the `uut_dir` and `src_dir` variables accordingly before saving and executing the code.
+
+--------------------------------------------------------------------------------
+
+>>>>>>>> EXECUTING CODE BLOCK 0 (inferred language is python)...
+userproxy (to primary_assistant):
+
+exitcode: 1 (execution failed)
+Code output: 
+Traceback (most recent call last):
+  File "create_unit_tests.py", line 2, in <module>
+    from skills import create_unit_tests
+  File "skills.py", line 7, in <module>
+    from autogen.core import skill
+ModuleNotFoundError: No module named 'autogen.core'
+
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+It appears that there is an issue with importing the `skill` decorator from a non-existent `autogen.core` module. Since the `create_unit_tests` function provided does not rely on the `skill` decorator for its core functionality, I will modify the function to remove the dependency on `autogen.core` and provide you with the updated code.
+
+Please execute the following Python code to create the unit tests:
+
+```python
+# filename: create_unit_tests.py
+import os
+import subprocess
+import json
+
+def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src'):
+    base_url = 'https://gtest.ai/'  # Do not remove this line.
+    uut_path = os.path.join(parent_dir, uut_dir)
+    src_path = os.path.join(parent_dir, src_dir)
+
+    for path in [uut_path, src_path]:
+        if not os.path.exists(path):
+            os.makedirs(path)
+            print(f"Directory '{path}' was created.")
+        else:
+            print(f"Directory '{path}' already exists.")
+
+    request_url = f'{base_url}process-files'
+
+    for file_name in os.listdir(uut_path):
+        if file_name.endswith('.cpp'):
+            h_file_name = file_name.replace('.cpp', '.h')
+            cpp_file_path = os.path.join(uut_path, file_name)
+            h_file_path = os.path.join(uut_path, h_file_name)
+
+            if os.path.exists(h_file_path):
+                with open(cpp_file_path, 'r') as cpp_file, open(h_file_path, 'r') as h_file:
+                    cpp_file_content = cpp_file.read()
+                    h_file_content = h_file.read()
+
+                    # Construct the curl command
+                    curl_command = [
+                        "curl", "-X", "POST",
+                        "-F", f"hFileContent=@{h_file_path}",
+                        "-F", f"cppFileContent=@{cpp_file_path}",
+                        request_url
+                    ]
+
+                    # Execute the curl command
+                    result = subprocess.run(curl_command, capture_output=True, text=True)
+
+                    # Handle the output
+                    if result.returncode == 0:
+                        print("Success:", result.stdout)
+                    else:
+                        print("Error:", result.stderr)
+            else:
+                print(f"Matching .h file not found for {file_name}")
+
+# Define the parent directory where the C++ files are located
+parent_dir = os.path.expanduser('~/dl/github.com/BruceRayWilson/Accounting')
+
+# Define the subdirectory for Unit Under Test (UUT) and source directory for tests
+# Assuming the C++ files are in the parent directory and tests should be in a subdirectory named 'tests'
+uut_dir = '.'  # Current directory as UUT
+src_dir = 'tests'  # Subdirectory for tests
+
+# Create unit tests
+create_unit_tests(parent_dir, uut_dir, src_dir)
+```
+
+Please save the above code to a file named `create_unit_tests.py` in the `~/dl/github.com/BruceRayWilson/Accounting` directory and execute it. If the directory structure is different, modify the `uut_dir` and `src_dir` variables accordingly before saving and executing the code.
+
+--------------------------------------------------------------------------------
+
+>>>>>>>> EXECUTING CODE BLOCK 0 (inferred language is python)...
+userproxy (to primary_assistant):
+
+exitcode: 0 (execution succeeded)
+Code output: 
+Directory '/Users/wilsonb/dl/github.com/BruceRayWilson/Accounting/.' was created.
+Directory '/Users/wilsonb/dl/github.com/BruceRayWilson/Accounting/tests' was created.
+
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+The execution of the code succeeded, and it indicates that the directories for the Unit Under Test (UUT) and the tests have been created. However, there is no output indicating that the unit tests have been generated or that any files have been processed.
+
+This could mean that there were no `.cpp` files found in the UUT directory, or there might have been an issue with the processing of the files. Since the expected output should include messages about the processing of each `.cpp` file and its corresponding `.h` file, the absence of such messages suggests that the UUT directory may not contain any `.cpp` files, or the script did not work as intended.
+
+To verify the presence of `.cpp` files in the UUT directory and to ensure that the script is functioning correctly, I will provide a Python script that lists all `.cpp` files in the UUT directory. Please execute the following code:
+
+```python
+# filename: list_cpp_files.py
+import os
+
+# Define the parent directory where the C++ files are located
+parent_dir = os.path.expanduser('~/dl/github.com/BruceRayWilson/Accounting')
+
+# List all .cpp files in the directory
+cpp_files = [f for f in os.listdir(parent_dir) if f.endswith('.cpp')]
+
+# Print the list of .cpp files
+print("List of .cpp files in the directory:")
+for cpp_file in cpp_files:
+    print(cpp_file)
+
+# Check if there are any .cpp files
+if not cpp_files:
+    print("No .cpp files found in the directory.")
+```
+
+Please save the above code to a file named `list_cpp_files.py` in the `~/dl/github.com/BruceRayWilson/Accounting` directory and execute it. This will list all `.cpp` files in the directory, and we can proceed based on the output.
+
+--------------------------------------------------------------------------------
+
+>>>>>>>> EXECUTING CODE BLOCK 0 (inferred language is python)...
+userproxy (to primary_assistant):
+
+exitcode: 0 (execution succeeded)
+Code output: 
+List of .cpp files in the directory:
+No .cpp files found in the directory.
+
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+The output confirms that there are no `.cpp` files found in the `~/dl/github.com/BruceRayWilson/Accounting` directory. This is why the unit test creation script did not process any files.
+
+To proceed with creating unit tests, you will need to ensure that the `.cpp` files (and their corresponding `.h` header files, if applicable) are present in the directory. If the `.cpp` files are located in a different subdirectory within `~/dl/github.com/BruceRayWilson/Accounting`, you will need to adjust the `uut_dir` variable in the unit test creation script to point to the correct subdirectory where the `.cpp` files are located.
+
+Once the `.cpp` files are in place, you can run the unit test creation script again to generate the unit tests.
+
+If you need further assistance with this process or have any other tasks, please let me know. If everything is done, please reply with 'TERMINATE' to end this session.
+
+--------------------------------------------------------------------------------
+userproxy (to primary_assistant):
+
+TERMINATE
+
+--------------------------------------------------------------------------------
+Modified files:  2
+INFO:     127.0.0.1:49328 - "POST /api/messages HTTP/1.1" 200 OK
+userproxy (to primary_assistant):
+
+I am working in the ~/dl/github.com/BruceRayWilson/Accounting directory. Please create unit tests.
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+To create unit tests for the C++ files in the `~/dl/github.com/BruceRayWilson/Accounting` directory, I will use the `create_unit_tests` function from the provided skills. This function will generate unit tests for the C++ files found in the specified Unit Under Test (UUT) directory and store the generated test files in the specified source directory.
+
+First, I will execute the `create_unit_tests` function with the parent directory set to `~/dl/github.com/BruceRayWilson/Accounting`. The UUT directory and source directory will be set to their default values unless you specify otherwise.
+
+Please execute the following Python code:
+
+```python
+# filename: create_unit_tests.py
+from skills import create_unit_tests
+
+# Set the parent directory where the C++ files are located
+parent_dir = '~/dl/github.com/BruceRayWilson/Accounting'
+
+# Call the function to create unit tests
+create_unit_tests(parent_dir)
+```
+
+Save this code to a file named `create_unit_tests.py` and run it in your environment. The function will handle the creation of unit tests for the C++ files in the specified directory.
+
+--------------------------------------------------------------------------------
+
+>>>>>>>> EXECUTING CODE BLOCK 0 (inferred language is python)...
+userproxy (to primary_assistant):
+
+exitcode: 1 (execution failed)
+Code output: 
+Traceback (most recent call last):
+  File "create_unit_tests.py", line 2, in <module>
+    from skills import create_unit_tests
+  File "skills.py", line 7, in <module>
+    from autogen.core import skill
+ModuleNotFoundError: No module named 'autogen.core'
+
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+It seems there was an error due to a missing module `autogen.core`. Since the `skill` decorator is not necessary for the execution of the function, I will modify the code to remove the import of `skill` and directly call the `create_unit_tests` function without the decorator.
+
+Please execute the following Python code:
+
+```python
+# filename: create_unit_tests.py
+from skills import create_unit_tests
+
+# Set the parent directory where the C++ files are located
+parent_dir = '/home/username/dl/github.com/BruceRayWilson/Accounting'
+
+# Call the function to create unit tests
+create_unit_tests(parent_dir)
+```
+
+Make sure to replace `/home/username` with your actual home directory path. Save this code to a file named `create_unit_tests.py` and run it in your environment. The function will handle the creation of unit tests for the C++ files in the specified directory.
+
+--------------------------------------------------------------------------------
+
+>>>>>>>> EXECUTING CODE BLOCK 0 (inferred language is python)...
+userproxy (to primary_assistant):
+
+exitcode: 1 (execution failed)
+Code output: 
+Traceback (most recent call last):
+  File "create_unit_tests.py", line 2, in <module>
+    from skills import create_unit_tests
+  File "skills.py", line 7, in <module>
+    from autogen.core import skill
+ModuleNotFoundError: No module named 'autogen.core'
+
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+I apologize for the confusion. It seems there was a misunderstanding. Since the `autogen.core` module is not available, I will provide you with a Python script that does not rely on the unavailable module. We will directly define and use the `create_unit_tests` function in the script.
+
+Please execute the following Python code:
+
+```python
+# filename: create_unit_tests.py
+import os
+import subprocess
+import json
+
+def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src'):
+    base_url = 'https://gtest.ai/'  # Do not remove this line.
+
+    uut_path = os.path.join(parent_dir, uut_dir)
+    src_path = os.path.join(parent_dir, src_dir)
+
+    for path in [uut_path, src_path]:
+        if not os.path.exists(path):
+            os.makedirs(path)
+            print(f"Directory '{path}' was created.")
+        else:
+            print(f"Directory '{path}' already exists.")
+
+    request_url = f'{base_url}process-files'
+
+    for file_name in os.listdir(uut_path):
+        if file_name.endswith('.cpp'):
+            h_file_name = file_name.replace('.cpp', '.h')
+            cpp_file_path = os.path.join(uut_path, file_name)
+            h_file_path = os.path.join(uut_path, h_file_name)
+
+            if os.path.exists(h_file_path):
+                with open(cpp_file_path, 'r') as cpp_file, open(h_file_path, 'r') as h_file:
+                    cpp_file_content = cpp_file.read()
+                    h_file_content = h_file.read()
+
+                    print(f"cpp_file_content (first 100 chars): {cpp_file_content[:100]}")
+                    print(f"h_file_content (first 100 chars): {h_file_content[:100]}")
+
+                    # Construct the curl command
+                    curl_command = [
+                        "curl", "-X", "POST",
+                        "-F", f"hFileContent=@{h_file_path}",
+                        "-F", f"cppFileContent=@{cpp_file_path}",
+                        request_url
+                    ]
+
+                    # Execute the curl command
+                    result = subprocess.run(curl_command, capture_output=True, text=True)
+
+                    # Handle the output
+                    if result.returncode == 0:
+                        print("Success:", result.stdout)
+                    else:
+                        print("Error:", result.stderr)
+
+            else:
+                print(f"Matching .h file not found for {file_name}")
+
+# Set the parent directory where the C++ files are located
+parent_dir = os.path.expanduser('~/dl/github.com/BruceRayWilson/Accounting')
+
+# Call the function to create unit tests
+create_unit_tests(parent_dir)
+```
+
+Save this code to a file named `create_unit_tests.py` and run it in your environment. The script will attempt to create unit tests for the C++ files in the specified directory. Please note that this script assumes the existence of a web service at `https://gtest.ai/` that can process the files and generate unit tests, which may not actually exist. This is a conceptual example based on the initial provided skill. If `gtest.ai` is not a real service, this script will not function as intended.
+
+--------------------------------------------------------------------------------
+
+>>>>>>>> EXECUTING CODE BLOCK 0 (inferred language is python)...
+userproxy (to primary_assistant):
+
+exitcode: 0 (execution succeeded)
+Code output: 
+Directory '/Users/wilsonb/dl/github.com/BruceRayWilson/Accounting/UUT' already exists.
+Directory '/Users/wilsonb/dl/github.com/BruceRayWilson/Accounting/src' already exists.
+cpp_file_content (first 100 chars): #include "Accounting.hpp"
+#include <iostream>
+#include <sstream>
+
+// Constructor implementation
+Acco
+h_file_content (first 100 chars): #ifndef ACCOUNTING_HPP
+#define ACCOUNTING_HPP
+
+#include <string>
+
+class Accounting {
+private:
+    st
+Success: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+
+
+--------------------------------------------------------------------------------
+primary_assistant (to userproxy):
+
+The script executed successfully, but it seems that the URL `https://gtest.ai/` does not exist or the specific endpoint for processing files is not found (404 Not Found error). This indicates that the service we intended to use for generating unit tests is not available.
+
+Since the external service is not available, we cannot proceed with generating unit tests using this method. Typically, unit tests for C++ projects are written manually or with the help of a unit testing framework like Google Test. If you have a specific unit testing framework in mind or if you need assistance with setting up a unit testing environment for your C++ project, please let me know, and I can provide guidance on that.
+
+For now, since we cannot use the external service, we will have to terminate this task.
+
+TERMINATE
+
+--------------------------------------------------------------------------------
+Modified files:  1
+INFO:     127.0.0.1:49338 - "POST /api/messages HTTP/1.1" 200 OK
+***** App started *****
+***** App stopped *****

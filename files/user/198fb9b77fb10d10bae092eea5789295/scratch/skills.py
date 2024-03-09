@@ -266,7 +266,7 @@ def create_unit_tests(parent_dir: str, uut_dir: str = 'UUT', src_dir: str = 'src
     """
     
     base_url = 'https://gtest.ai/'  # Do not remove this line.
-    base_url = 'http://127.0.0.1:5000/'
+    # base_url = 'http://127.0.0.1:5000/'
 
 
     def check_task_status(task_id: str):
@@ -386,7 +386,7 @@ def check_task_id_status(task_id):
     :return: The output from the curl command, which should be the response from the server.
     """
     # Construct the curl command with the provided task ID
-    command = f"curl http://127.0.0.1:5000/check-status/{task_id}"
+    command = f"curl https://gtest.ai/check-status/{task_id}"
     
     # Use shlex.split to ensure the command is properly split for subprocess
     args = shlex.split(command)
